@@ -8,7 +8,7 @@ const HomeCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img-home/torta-hojarasca.jpeg" /* <- Cambio aquí */
+          src="/img-home/torta-hojarasca.jpeg" 
           alt="Torta de hojarasca con manjar"
         />
         <Carousel.Caption>
@@ -19,7 +19,7 @@ const HomeCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img-home/galletas-variedad.jpeg" /* <- Cambio aquí */
+          src="/img-home/galletas-variedad.jpeg" 
           alt="Galletas estilo New York con chispas de chocolate"
         />
         <Carousel.Caption>
@@ -30,7 +30,7 @@ const HomeCarousel: React.FC = () => {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="/img-home/banqueteria.png" /* <- Cambio aquí */
+          src="/img-home/banqueteria.png" 
           alt="Mesa dulce con variedad de productos de banquetería"
         />
         <Carousel.Caption>

@@ -1,69 +1,38 @@
-# React + TypeScript + Vite
+# Proyecto: Migración de Repostería Catalina a React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto es el resultado de la migración de un sitio web estático desarrollado con HTML, CSS y jQuery a una Aplicación de Página Única (SPA) dinámica construida con React.
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **Framework/Librería:** React 18+
+* **Herramienta de Build:** Vite
+* **Enrutamiento:** React Router DOM v6
+* **Estilos:** React-Bootstrap y Bootstrap 5
+* **Íconos:** Bootstrap Icons
 
-## Expanding the ESLint configuration
+## Cómo Ejecutar el Proyecto
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+1.  Clonar el repositorio:
+    ```bash
+    git clone [URL-DE-TU-REPOSITORIO]
+    ```
+2.  Navegar a la carpeta del proyecto:
+    ```bash
+    cd [NOMBRE-DE-LA-CARPETA]
+    ```
+3.  Instalar las dependencias:
+    ```bash
+    npm install
+    ```
+4.  Iniciar el servidor de desarrollo:
+    ```bash
+    npm run dev
+    ```
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Arquitectura
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+El proyecto está estructurado con una arquitectura basada en componentes, separando los componentes de página (ubicados en `src/components/pages`) de los componentes reutilizables (ubicados en `src/components/common`).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Los estilos globales y las fuentes se gestionan a través de una hoja de estilos principal (`style.css`), mientras que los assets estáticos como imágenes y el favicon se sirven desde la carpeta `public` para optimizar su carga, siguiendo las convenciones de Vite.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---

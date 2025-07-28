@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, Button, Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-// Arreglo con la información de los productos, ahora con rutas directas a /public
+
 const products = [
   {
     image: '/img-home/cinamon-roll.jpeg',

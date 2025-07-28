@@ -1,11 +1,15 @@
 import React from 'react';
+import { Container } from 'react-bootstrap';
+import ServiceList from '../common/ServiceList'; // Importamos el nuevo componente
 
 const ServicePage: React.FC = () => {
   return (
-    <div>
-      <h1>Página Sobre Nosotros</h1>
-      <p>Contenido de la página sobre nosotros...</p>
-    </div>
+    <Container as="main" className="my-5">
+      <section id="nuestros-servicios">
+        <h2 className="text-center mb-5">Nuestros Productos y Servicios</h2>
+        <ServiceList />
+      </section>
+    </Container>
   );
 };
 

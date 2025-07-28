@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Form, Button } from 'react-bootstrap';
 
 const ContactForm: React.FC = () => {
-  // useState para manejar los valores de los campos del formulario
   const [formData, setFormData] = useState({
     nombre: '',
     email: '',
@@ -10,17 +9,16 @@ const ContactForm: React.FC = () => {
     mensaje: '',
   });
 
-  // Esta función se ejecuta cada vez que el usuario escribe en un campo
+  
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData({ ...formData, [id]: value });
   };
 
-  // Esta función se ejecuta al enviar el formulario
+  
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault(); // Previene que la página se recargue
-    // Aquí iría la lógica para enviar los datos a un servidor.
-    // Por ahora, solo los mostraremos en la consola.
+    e.preventDefault(); 
+    
     console.log('Datos del formulario:', formData);
     alert('Mensaje enviado (revisa la consola para ver los datos).');
     // Opcional: limpiar el formulario después de enviar

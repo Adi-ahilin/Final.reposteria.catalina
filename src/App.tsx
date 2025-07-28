@@ -1,17 +1,13 @@
 import React from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
-
-// Importa los componentes de la plantilla
 import Navbar from './components/common/Navbar';
 import Footer from './components/common/Footer';
-
-// Importa los componentes de las páginas
 import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import ServicePage from './components/pages/ServicePage';
 
-// Componente de la plantilla principal
+
 const Layout: React.FC = () => {
   return (
     <div>
