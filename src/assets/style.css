@@ -23,45 +23,6 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 1rem;
 }
 
-.navbar {
-    background-color: var(--color-naranja-acento) !important;
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1020;
-}
-
-.navbar-brand {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
-    font-weight: normal;
-    color: var(--color-azul-oscuro) !important;
-    display: flex;
-    align-items: center;
-    line-height: 1;
-}
-
-.navbar-brand img {
-    margin-right: 15px;
-    height: 1.2em;
-    width: 1.8em;
-    object-fit: cover;
-}
-
-.navbar-nav .nav-link {
-    color: var(--color-blanco-crema) !important;
-    font-weight: 500;
-    margin-left: 15px;
-    transition: color 0.3s ease;
-}
-
-.navbar-nav .nav-link:hover {
-    color: var(--color-azul-oscuro) !important;
-}
-
 .carousel-item img {
     height: 550px;
     object-fit: cover;

@@ -30,8 +30,8 @@ const FeaturedProducts: React.FC = () => {
       <section id="nuestras-delicias" className="text-center">
         <h2 className="mb-5">Nuestras Delicias Destacadas</h2>
         <Row>
-          {products.map((product, index) => (
-            <Col lg={4} md={6} className="mb-4" key={index}>
+          {products.map((product) => (
+            <Col lg={4} md={6} className="mb-4" key={product.title}>
               <Card className="h-100">
                 <Card.Img variant="top" src={product.image} />
                 <Card.Body className="d-flex flex-column">

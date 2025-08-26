@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 
+// 1. Importar el archivo de módulo CSS
+import styles from './Navbar.module.css';
+
 const Navbar: React.FC = () => {
   const [expanded, setExpanded] = useState<boolean>(false);
 
@@ -9,9 +12,20 @@ const Navbar: React.FC = () => {
   const handleNavLinkClick = () => setExpanded(false);
 
   return (
-    <BootstrapNavbar expand="lg" className="navbar" fixed="top" expanded={expanded}>
+    // 2. Aplicar la clase del módulo al componente de Bootstrap
+    <BootstrapNavbar 
+      expand="lg" 
+      className={styles.navbar} // Clase modular para el contenedor principal
+      fixed="top" 
+      expanded={expanded}
+    >
       <Container>
-        <BootstrapNavbar.Brand as={NavLink} to="/" className="navbar-brand" onClick={handleNavLinkClick}>
+        <BootstrapNavbar.Brand 
+          as={NavLink} 
+          to="/" 
+          className={styles.navbarBrand} // Clase modular para la marca
+          onClick={handleNavLinkClick}
+        >
           <img src="/logo.jpg" alt="Logo Repostería Catalina" />
           Repostería Catalina
         </BootstrapNavbar.Brand>
@@ -23,16 +37,17 @@ const Navbar: React.FC = () => {
         
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            <Nav.Link as={NavLink} to="/" end onClick={handleNavLinkClick} className="nav-link">
+            {/* 3. Aplicar la clase modular a los links */}
+            <Nav.Link as={NavLink} to="/" end onClick={handleNavLinkClick} className={styles.navLink}>
               Inicio
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/services" onClick={handleNavLinkClick} className="nav-link">
+            <Nav.Link as={NavLink} to="/services" onClick={handleNavLinkClick} className={styles.navLink}>
               Servicios
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/about" onClick={handleNavLinkClick} className="nav-link">
+            <Nav.Link as={NavLink} to="/about" onClick={handleNavLinkClick} className={styles.navLink}>
               Nosotros
             </Nav.Link>
-            <Nav.Link as={NavLink} to="/contact" onClick={handleNavLinkClick} className="nav-link">
+            <Nav.Link as={NavLink} to="/contact" onClick={handleNavLinkClick} className={styles.navLink}>
               Contáctenos
             </Nav.Link>
           </Nav>

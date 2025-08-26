@@ -2,9 +2,9 @@ import emailjs from '@emailjs/browser';
 
 // Configuración de EmailJS
 const EMAILJS_CONFIG = {
-  SERVICE_ID: 'service_vj9xey9',
-  TEMPLATE_ID: 'template_f55yte8', 
-  PUBLIC_KEY: 'NkxfrAY2aoOSlSeY_'
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 };
 
 // Interface para los datos del formulario

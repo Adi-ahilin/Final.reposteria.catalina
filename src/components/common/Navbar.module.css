@@ -1,0 +1,51 @@
+/*
+  Estilos específicos para el componente Navbar.
+  Estos nombres de clase se transformarán para ser únicos.
+*/
+
+.navbar {
+    background-color: var(--color-naranja-acento) !important;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* Las propiedades fixed, top, width y z-index se manejan mejor con props de React-Bootstrap */
+}
+
+.navbarBrand {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.2rem;
+    font-weight: normal;
+    color: var(--color-azul-oscuro) !important;
+    display: flex;
+    align-items: center;
+    line-height: 1;
+}
+
+.navbarBrand img {
+    margin-right: 15px;
+    height: 1.2em;
+    width: 1.8em;
+    object-fit: cover;
+}
+
+.navLink {
+    color: var(--color-blanco-crema) !important;
+    font-weight: 500;
+    margin-left: 15px;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--color-azul-oscuro) !important;
+}
+
+/* Media queries específicos para el Navbar */
+@media (max-width: 767.98px) {
+    .navbarBrand {
+        font-size: 1.5rem;
+    }
+
+    .navbarBrand img {
+        height: 45px;
+    }
+}

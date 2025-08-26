@@ -44,8 +44,8 @@ const servicesData = [
 const ServiceList: React.FC = () => {
   return (
     <Row>
-      {servicesData.map((service, index) => (
-        <Col lg={4} md={6} className="mb-4" key={index}>
+      {servicesData.map((service) => (
+        <Col lg={4} md={6} className="mb-4" key={service.title}>
           <Card className="h-100">
             <Card.Img variant="top" src={service.image} alt={service.title} />
             <Card.Body className="d-flex flex-column">
