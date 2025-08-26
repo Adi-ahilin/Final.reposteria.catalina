@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { Navbar as BootstrapNavbar, Nav, Container } from 'react-bootstrap';
 
-// 1. Importar el archivo de módulo CSS
+// Importar el archivo de módulo CSS
 import styles from './Navbar.module.css';
 
 const Navbar: React.FC = () => {
@@ -12,10 +12,9 @@ const Navbar: React.FC = () => {
   const handleNavLinkClick = () => setExpanded(false);
 
   return (
-    // 2. Aplicar la clase del módulo al componente de Bootstrap
     <BootstrapNavbar 
       expand="lg" 
-      className={styles.navbar} // Clase modular para el contenedor principal
+      className={styles.navbar}
       fixed="top" 
       expanded={expanded}
     >
@@ -23,11 +22,12 @@ const Navbar: React.FC = () => {
         <BootstrapNavbar.Brand 
           as={NavLink} 
           to="/" 
-          className={styles.navbarBrand} // Clase modular para la marca
+          className={styles.navbarBrand}
           onClick={handleNavLinkClick}
         >
           <img src="/logo.jpg" alt="Logo Repostería Catalina" />
-          Repostería Catalina
+          {/* Envolvemos el texto en un span para aplicar el estilo .brandText */}
+          <span className={styles.brandText}>Repostería Catalina</span>
         </BootstrapNavbar.Brand>
         
         <BootstrapNavbar.Toggle 
@@ -37,7 +37,6 @@ const Navbar: React.FC = () => {
         
         <BootstrapNavbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
-            {/* 3. Aplicar la clase modular a los links */}
             <Nav.Link as={NavLink} to="/" end onClick={handleNavLinkClick} className={styles.navLink}>
               Inicio
             </Nav.Link>
