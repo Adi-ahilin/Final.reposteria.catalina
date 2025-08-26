@@ -40,7 +40,7 @@ Este proyecto implementa prácticas estándar de la industria para asegurar un c
 
 1. Clonar el repositorio
 
-git clone [URL-DE-TU-REPOSITORIO]
+git clone [https://github.com/Adi-ahilin/Final.reposteria.catalina.git]
 
 # 2. Navegar al directorio del proyecto
 cd Final.reposteria.catalina
